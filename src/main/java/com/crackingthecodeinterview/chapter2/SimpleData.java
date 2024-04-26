@@ -57,8 +57,12 @@ public class SimpleData implements Valuable<SimpleData> {
 
     @Override
     public int hashCode() {
-        String hashCode = String.valueOf(stringData.hashCode()) +
-                intData;
-        return Integer.parseInt(hashCode);
+//        String hashCode = String.valueOf(stringData.hashCode()) +
+//                intData;
+//        return Integer.parseInt(hashCode);
+        int result = stringData.hashCode();
+        Integer wrappedIntData = intData;
+        result = 31 * result + wrappedIntData.hashCode();
+        return result;
     }
 }
