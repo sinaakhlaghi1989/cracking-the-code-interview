@@ -62,4 +62,3 @@ public class SimpleData implements Valuable<SimpleData> {
         return Integer.parseInt(hashCode);
     }
 }
-
